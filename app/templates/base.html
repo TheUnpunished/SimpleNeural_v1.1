@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>
+
+		{% block title %}
+		{% endblock %} | Flask app
+
+	</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/for_footer.css') }}">
+</head>
+<body>
+		<div class='wrapper'>
+		<div class='content'>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<a class="navbar-brand" href="{{ url_for('index') }}">Главная</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="{{ url_for('posts.index') }}">О нас</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+<div class="container">
+	<br>
+	<div class="row">
+		<h1>
+			{% block content_title %}
+			{% endblock %}
+		</h1>
+	</div>
+
+		{% block content %}
+		{% endblock %}
+
+	</div>
+</div>
+			<div class="footer">
+			<footer>
+				<div class="footer-copyright text-center py-3">© 2018 Copyright:
+					<a href="https://vk.com/4heck"> SimpleBlog.com</a>
+				</div>
+			</footer>
+			</div>
+		</div>
+</body>
+</html>

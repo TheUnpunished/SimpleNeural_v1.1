@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block title %}
+	Прогнозирование
+{% endblock %}
+
+{% block content_title %}
+	<h1>Прогнозирование</h1>
+{% endblock %}
+
+{% block content %}
+посещаемости, продаж и выручки за 2018 - 2019 г.
+	<hr>
+	<table>
+		<tr>
+			<td width="10%">Посещаемость в <br> 2017-2018 году</td>
+			<td><img src="{{ url_for("static", filename="attendance_2017-2018.png") }}" width="100%"></td>
+		</tr>
+		<tr>
+			<td>Продажи в <br> 2017-2018 году</td>
+			<td><img src="{{ url_for("static", filename="sales_2017-2018.png") }}" width="100%"></td>
+		</tr>
+		<tr>
+			<td>Коэффициенты <br> продаж в <br> 2017-2018 году</td>
+			<td><img src="{{ url_for("static", filename="ratio.png") }}" width="100%"></td>
+		</tr>
+		<tr>
+			<td>Прогнозируемая посещаемость в <br> 2018-2019 году</td>
+			<td><img src="{{ url_for("static", filename="prediction_attendance.png") }}" width="100%"></td>
+		</tr>
+		<tr>
+			<td>Прогнозируемые продажи в <br> 2018-2019 году</td>
+			<td><img src="{{ url_for("static", filename="prediction_sales.png") }}" width="100%"></td>
+		</tr>
+		<tr>
+			<td>Прогнозируемая выручка в <br> 2018-2019 году</td>
+			<td><img src="{{ url_for("static", filename="prediction_revenue.png") }}" width="100%"></td>
+		</tr>
+		<tr>
+			<td>Прогнозируемая выручка в <br> сравнении с выручкой <br> 2017-2018 года</td>
+			<td><img src="{{ url_for("static", filename="compare_revenue.png") }}" width="100%"></td>
+		</tr>
+	</table>
+<br>
+{% endblock %}

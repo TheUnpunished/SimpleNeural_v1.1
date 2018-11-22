@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block title %}
+	SimpleNeural
+{% endblock %}
+
+{% block content_title %}
+	<h1>Simple Neural</h1>
+{% endblock %}
+
+{% block content %}
+	Умное прогнозирование закупок
+	<hr>
+	<table width="100%">
+		<tr>
+		<td width = "30%">
+	<form action="/", method="post">
+			<div class="form-group">
+				<label for="exampleFormControlSelect1">Выберите годовой график:</label>
+				<select name="Select" class="form-control" id="exampleFormControlSelect1">
+				<option value="2007">2007</option>
+				<option value="2008">2008</option>
+				<option value="2009">2009</option>
+				<option value="2010">2010</option>
+				<option value="2011">2011</option>
+				<option value="2012">2012</option>
+				<option value="2013">2013</option>
+				<option value="2014">2014</option>
+				<option value="2015">2015</option>
+				<option value="2016">2016</option>
+				<option value="2017">2017</option>
+			</select>
+			</div>
+		</p>
+		<p><input type="submit" value="Продолжить" class="btn btn-primary"></p>
+	</form>
+		</td>
+		<td width="20%"></td>
+		<td width = "30%">
+		<form action="/2018">
+		</p>
+		Показать результаты прогнозирования
+		<p>на 2018-2019г.
+		<br>
+		<p><input type="submit" value="Прогноз" class="btn btn-primary"></p>
+		</form>
+</td>
+
+</tr>
+</table>
+<br>
+{% endblock %}
+
+
