@@ -146,10 +146,6 @@ ax.set_title('Prediction Statistics 2018-2019')
 ax.legend(loc=2);
 fig.savefig('static/prediction_sales.png')
 
-# Запись в txt файл информации о графике прогноза продаж
-itog = atn2.describe()
-itog.to_sql(name='analyze', con=connection, index=False, if_exists='replace')
-itog.to_csv('output/analyze.txt', sep='-')
 
 # p - prediction (Прогноз)
 # r - revenue (Выручка)
@@ -207,8 +203,6 @@ ax.set_title('Compare Revenue')
 ax.legend(loc=2);
 fig.savefig('static/compare_revenue.png')
 
-# Вывод таблицы с прогонзами (части)
-dataset_2018_2019.head(10)
 # Удаление ненужных таблиц
 metadata = db.MetaData()
 prediction = db.Table('prediction_temp', metadata, autoload=True, autoload_with=engine)

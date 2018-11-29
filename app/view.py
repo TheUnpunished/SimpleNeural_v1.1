@@ -11,6 +11,7 @@ def index():
         return redirect('/'+str(year))
     else:
     	return render_template('index.html')
+
 @app.route('/<selectedyear>/', methods=['GET'])
 def years(selectedyear):
     year=int(float(selectedyear))
@@ -22,3 +23,7 @@ def years(selectedyear):
         yearname = str(year) + "-" + str(year + 1)
         pngname = "attendance_" + yearname + ".png"
         return render_template('year.html', pngname=pngname, yearname=yearname)
+
+@app.route('/about/')
+def about():
+        return render_template('about.html')
