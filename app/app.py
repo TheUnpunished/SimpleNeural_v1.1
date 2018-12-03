@@ -6,7 +6,7 @@ import numpy as np
 import sqlalchemy as db
 import matplotlib.pyplot as plt
 
-engine = db.create_engine('postgresql+psycopg2://postgres:1@localhost:5432/simple_neural')
+engine = db.create_engine('postgresql+psycopg2://postgres:root@localhost:5432/simple_neural')
 connection = engine.connect()
 
 app = Flask(__name__)
